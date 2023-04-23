@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <header>
+        <h1>Formulários</h1>
+        <nav>
+            <a href="./index.html">Home</a>
+        </nav>
+    </header>
+    <br />
+    <form>
+        <!-- 'input' é uma tag simples que é usada p criar os campos do formulário -->
+        <input type="text" placeholder="Seu nome"/>
+        <br />
+        
+        <!-- label pode ser clicado p ir pro campo através da tag 'for' que pega o 'id' do input como atributo -->
+        <label for="email">Seu email</label>
+        <input id="email" type="email"/>
+        <br />
+        
+        <!-- esse input type serve pra quando celulares abrirem o campo, abrir no teclado p numero de tel -->
+        <input type="tel" placeholder="Seu telefone" /> <br />
+        
+        <!-- type number restringe input a números e adiciona um dial, 'min' e 'max' limita os dígitos, 'step' diz de quanto em quanto é o incremento -->
+        <input type="number" max="10" min="2" step="2"/> <br />
+        
+        <!-- pra anexar um arquivo -->
+        <input type="file" /> <br />
+        
+        <!-- pra dar um seletor de cores -->
+        <input type="color" /> <br />
+
+        <!-- 'required=“true”' pra so poder avançar selecionando; texto do checkbox é adicionado com o 'label' -->
+        <input id="checkbox-termos" type="checkbox" required=“true”/> <label for="checkbox-termos">Aceito os termos</label><br />
+
+        <!-- 'radio' é um campo pra pesquisas e perguntas. usa o atributo 'name' pra informar que as opções fazem parte da mesma pergunta (pra só poder selecionar 1) -->
+        <p>
+            Qual sua cor favorita?
+        </p>
+        <input id="cor-vermelha" name="cor-favorita" type="radio" /> <label for="cor-vermelha">Vermelho</label>
+        <input id="cor-verde" name="cor-favorita" type="radio" /> <label for="cor-verde">Verde</label>
+        <input id="cor-azul" name="cor-favorita" type="radio" /> <label for="cor-azul">Azul</label>
+        <br/><br/>
+
+        <!-- select/options pra inserir uma caixa de opções -->
+        <label>Qual seu filme favorito?</label>
+        <select multiple>
+            <option>Filme A</option>
+            <option>Filme B</option>
+            <option>Filme C</option>
+        </select>
+        <br/><br/>
+
+        <!-- caixa de texto (maior que o input text)-->
+        <textarea></textarea>
+
+        <!-- botões com atributos -->
+        <button type="submit">Enviar formulário</button>
+        <button type="reset">Limpar formulário</button>
+    </form>
+</body>
+</html>
