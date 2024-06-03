@@ -40,7 +40,3 @@ form.addEventListener('submit', function(e) {
         }, 5000);
     }
 });
-
-document.querySelector('textarea').addEventListener('keyup', function(e) {
-    console.log(e);
-});
