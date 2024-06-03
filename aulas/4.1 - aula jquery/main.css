@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    color: #fff;
+    padding: 16px 0;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header h1 {
+    margin-right: 60px;
+}
+
+form h2 {
+    margin-bottom: 20px; 
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+input, button {
+    padding: 6px;
+    margin-right: 16px;
+}
+
+button {
+    background-color: #009f75;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botao-cancelar {
+    background-color: rgb(192, 71, 16);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    max-height: 250px;
+    position: relative;
+    list-style: none;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-img-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+.overlay-img-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-img-link {
+    opacity: 1;
+}
