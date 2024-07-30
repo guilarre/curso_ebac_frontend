@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croché do Larré</title>
+
+    <link rel="stylesheet" type="text/css" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>CROCHÉ DO LARRÉ</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#catalogo">Catálogo de produtos</a>
+                    </li>
+                    <li>
+                        <a href="#sobre">Sobre o artista</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="catalogo">
+        <div class="container">
+            <h2>Produtos</h2>
+            <div class="produtos">
+                <div>
+                    <img src="./imgs/bolsas.jpg"/>
+                    <h3>Bolsas</h3>
+                </div>
+                <div>
+                    <img src="./imgs/meias.jpg"/>
+                    <h3>Meias divertidas</h3>
+                </div>
+                <div>
+                    <img src="./imgs/gorros.jpg"/>
+                    <h3>Gorrinhos</h3>
+                </div>
+                <div>
+                    <img src="./imgs/chapeus.jpg"/>
+                    <h3>Chapéus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="container">
+            <div>
+                <h2>Sobre o artista</h2>
+                <p>
+                    Eae galera, meu nome é Guilherme Larré, eu sou filho, neto e sobrinho de algumas das crocheteiras mais raizes de Olinda (Pernambuco), e tou aqui tentando reviver algumas das artes que sustentaram minha família por décadas.
+                </p>
+                <p>
+                    A ideia é compartilhar algumas de minhas criações, sem compromisso, pra que eu possivelmente inspire mais jovens a adaptarem artes têxteis seculares para o seu estilo no século XXI.
+                </p>
+                <p>
+                    Posso dizer que o croché (ou crochê) e tricô são ótimas distrações pros nossos dias estressantes. Com certeza já me salvou de diversos momentos cansativos e depressivos. Quem sabe eu não compartilho uns tutoriais por aqui também? Se me pedirem com carinho, eu faço!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-methods">
+                <div>
+                    <h3>Fale comigo!</h3>
+                    <p class="mensagem-sucesso">Guilherme, sua mensagem foi enviada com sucesso!</p>
+                    <form id="form-mensagem">
+                        <input id="nome-usuario" type="text" placeholder="Seu nome completo" required/>
+                        <p class="mensagem-erro">O nome não está completo!</p>
+                        <input id="email-usuario" type="email" placeholder="Seu e-mail" required/>
+                        <input id="tel-usuario" type="tel" placeholder="Seu telefone (opcional)"/>
+                        <textarea id="msg-usuario" placeholder="Sua mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Me acompanhe nas redes</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/guilarre" title="Siga-me no Instagram">
+                                <img src="./imgs/instagram.png" alt="Logo do Instagram"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Manda um zap">
+                                <img src="./imgs/whatsapp.png" alt="Logo do Whatsapp"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Visite meu canal no Youtube">
+                                <img src="./imgs/youtube.png" alt="Logo do Youtube"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Bora crochetar junto!</h3>
+                    <p>
+                        Rua JavaScript n° 124, Vila HTML - Olinda - PE
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Guilherme Larré - Todos os direitos reservados - 2022
+            </p>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    overflow-x: hidden; /*pra tirar o scroll horiz.*/
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+}
+
+header {
+    background-color: blue;
+    color: #fff;
+    padding: 16px 0;
+    margin-bottom: 32px;
+}
+
+header .container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+header h1 {
+    font-style: italic;
+}
+
+nav li {
+    display: inline;
+    margin-right: 16px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section h2 {
+    color: blue;
+    border-bottom: 2px solid blue;
+    padding-bottom: 12px;
+    margin-bottom: 32px;
+}
+
+#sobre .container {
+    margin-bottom: 64px;
+    display: flex;
+}
+
+#sobre p {
+    margin-bottom: 16px;
+}
+
+#sobre img {
+    max-width: 400px;
+    margin-right: 32px;
+}
+
+#produtos ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+}
+
+#produtos ul li {
+    list-style: none;
+    padding: 0;
+    max-width: 200px;
+}
+
+#produtos img {
+    max-width: 200px;
+    margin-bottom: 8px;
+}
+
+#produtos p {
+    font-size: small;
+    margin: 8px 0;
+}
+
+#produtos button {
+    padding: 6px 0;
+    background-color: blue;
+    color: #fff;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#produtos button:hover {
+    background-color: #0020ae;
+}
+
+/* Telas de tablet em modo retrato */
+@media screen and (min-width: 641px) and (max-width: 1023px) and (orientation: portrait) {
+    .container {
+        max-width: 640px;
+    }
+
+    #sobre .container {
+        display: block;
+    }
+
+    #sobre img {
+        max-width: 640px;
+        margin-bottom: 24px;
+    }
+
+    #produtos ul {
+        grid-template-columns: auto auto;
+    }
+
+    /* COMO FAZ PRA ALINHAR??? */
+    #produtos ul li {
+        max-width: 280px;
+    }
+
+    #produtos img {
+        max-width: 280px;
+    }
+}
+
+/* Telas de celular */
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 320px;
+    }
+    
+    nav li {
+        display: block;
+    }
+    
+    #sobre .container {
+        display: block;
+    }
+
+    #sobre img {
+        max-width: 320px;
+        margin-bottom: 24px;
+    }
+
+    #produtos ul {
+        grid-template-columns: auto;
+    }
+
+    /* COMO FAZ PRA ALINHAR??? (precisa?) */
+    #produtos ul li {
+        max-width: 280px;
+    }
+
+    #produtos img {
+        max-width: 280px;
+    }
+}
