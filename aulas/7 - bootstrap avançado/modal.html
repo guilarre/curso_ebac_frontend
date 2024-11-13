@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Cards</title>
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <style>
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal">
+        Abrir modal
+    </button>
+    <!-- data-bs-backdrop="static" pra não fechar o modal ao clicar fora -->
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título do modal</h5>
+                    <!-- data-bs-dismiss="modal" é necessário p poder ter o comportamento de fechar -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consequatur nam ducimus pariatur sunt soluta facere esse quos architecto odit commodi deserunt expedita neque, nemo corrupti asperiores. Quam, minus consequuntur!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <!-- pra mostrar o modal assim que carrega a página com o eventlistener -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            // com delay:
+            setTimeout(() => {
+                modalExemplo.show();
+            }, 3000)
+            // sem delay:
+            // modalExemplo.show();
+        })
+    </script>
+</body>
+</html>
