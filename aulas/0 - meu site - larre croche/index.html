@@ -4,124 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croché do Larré</title>
-
-    <link rel="stylesheet" type="text/css" href="./main.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
 <body>
-    <header>
+    <!-- Cabeçalho -->
+    <header id="header">
         <div class="container">
-            <h1>CROCHÉ DO LARRÉ</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#catalogo">Catálogo de produtos</a>
-                    </li>
-                    <li>
-                        <a href="#sobre">Sobre o artista</a>
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="catalogo">
-        <div class="container">
-            <h2>Produtos</h2>
-            <div class="produtos">
-                <div>
-                    <img src="./imgs/bolsas.jpg"/>
-                    <h3>Bolsas</h3>
-                </div>
-                <div>
-                    <img src="./imgs/meias.jpg"/>
-                    <h3>Meias divertidas</h3>
-                </div>
-                <div>
-                    <img src="./imgs/gorros.jpg"/>
-                    <h3>Gorrinhos</h3>
-                </div>
-                <div>
-                    <img src="./imgs/chapeus.jpg"/>
-                    <h3>Chapéus</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="sobre">
-        <div class="container">
-            <div>
-                <h2>Sobre o artista</h2>
-                <p>
-                    Eae galera, meu nome é Guilherme Larré, eu sou filho, neto e sobrinho de algumas das crocheteiras mais raizes de Olinda (Pernambuco), e tou aqui tentando reviver algumas das artes que sustentaram minha família por décadas.
-                </p>
-                <p>
-                    A ideia é compartilhar algumas de minhas criações, sem compromisso, pra que eu possivelmente inspire mais jovens a adaptarem artes têxteis seculares para o seu estilo no século XXI.
-                </p>
-                <p>
-                    Posso dizer que o croché (ou crochê) e tricô são ótimas distrações pros nossos dias estressantes. Com certeza já me salvou de diversos momentos cansativos e depressivos. Quem sabe eu não compartilho uns tutoriais por aqui também? Se me pedirem com carinho, eu faço!
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <div class="contact-methods">
-                <div>
-                    <h3>Fale comigo!</h3>
-                    <p class="mensagem-sucesso">Guilherme, sua mensagem foi enviada com sucesso!</p>
-                    <form id="form-mensagem">
-                        <input id="nome-usuario" type="text" placeholder="Seu nome completo" required/>
-                        <p class="mensagem-erro">O nome não está completo!</p>
-                        <input id="email-usuario" type="email" placeholder="Seu e-mail" required/>
-                        <input id="tel-usuario" type="tel" placeholder="Seu telefone (opcional)"/>
-                        <textarea id="msg-usuario" placeholder="Sua mensagem" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-                <div>
-                    <h3>Me acompanhe nas redes</h3>
-                    <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/guilarre" title="Siga-me no Instagram">
-                                <img src="./imgs/instagram.png" alt="Logo do Instagram"/>
-                            </a>
+            <!-- navbar-expand-lg pra expandir menu pra desktop -->
+            <div class="navbar navbar-expand-lg">
+                <h1>CROCHÉ DO LARRÉ</h1>
+                <!-- TO DO: tentar ajeitar botão pra só aparecer pra mobile/tablet -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse text-center justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active scroll-top" href="#">Início</a>
                         </li>
-                        <li>
-                            <a href="#" title="Manda um zap">
-                                <img src="./imgs/whatsapp.png" alt="Logo do Whatsapp"/>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#criacoes">Criações</a>
                         </li>
-                        <li>
-                            <a href="#" title="Visite meu canal no Youtube">
-                                <img src="./imgs/youtube.png" alt="Logo do Youtube"/>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre o artista</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <h3>Bora crochetar junto!</h3>
-                    <p>
-                        Rua JavaScript n° 124, Vila HTML - Olinda - PE
-                    </p>
-                </div>
+                </nav>
             </div>
         </div>
-    </section>
-    <footer>
+    </header>
+    
+    <div data-bs-spy="scroll" data-bs-target="#header">
         <div class="container">
-            <p>
-                &copy; Guilherme Larré - Todos os direitos reservados - 2022
-            </p>
+            <!-- Carrossel -->
+            <section id="inicio">
+                <h2>Início</h2>
+                <div id="carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div data-bs-interval="5000" class="carousel-item active">
+                            <img class="d-block w-100" src="./imgs/bolsas.jpg" alt="Bolsas de crochê tunisiano: uma preta com detalhe cinza e outra preta e branca.">
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./imgs/meias.jpg" alt="Meia de tricô variegada com as cores: vermelho, amarelo, branco, lilás e laranja.">
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./imgs/gorros.jpg" alt="Gorros de tricô: um mostarda, outro azul royal e outro preto e branco.">
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./imgs/chapeus.jpg" alt="Chapéus de crochê: um laranja e outro variegado marrom e bege.">
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./imgs/amigurumis.jpg" alt="Amigurumi do homem aranha com pano de crochê colorido no fundo.">
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./imgs/paninhos.jpg" alt="Paninhos de tricô com texturas e cores diferentes: chevron em azul bebê, outro tipo de chevron em azul petróleo e ponto waffle em verde oliva.">
+                        </div>
+                    </div>
+                    <button data-bs-target="#carousel" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carousel" data-bs-slide="next" class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </section>
+    
+            <!-- Cards -->
+            <!-- classe padding-fix pra ajeitar espaçamento quando clicar no menu e rolar para seção -->
+            <section id="criacoes" class="padding-fix">
+                <h2>Criações</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Bolsas
+                            </header>
+                            <img class="d-block w-100" src="./imgs/bolsas.jpg" alt="Bolsas de crochê tunisiano: uma preta com detalhe cinza e outra preta e branca.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de bolsas de crochê e crochê tunisiano</h4>
+                                <p class="card-text">Dificuldade: intermediário</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Meias
+                            </header>
+                            <img class="d-block w-100" src="./imgs/meias.jpg" alt="Meia de tricô variegada com as cores: vermelho, amarelo, branco, lilás e laranja.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de meias de tricô</h4>
+                                <p class="card-text">Dificuldade: intermediário</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Gorros
+                            </header>
+                            <img class="d-block w-100" src="./imgs/gorros.jpg" alt="Gorros de tricô: um mostarda, outro azul royal e outro preto e branco.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de gorros de tricô</h4>
+                                <p class="card-text">Dificuldade: fácil</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Chapéus
+                            </header>
+                            <img class="d-block w-100" src="./imgs/chapeus.jpg" alt="Chapéus de crochê: um laranja e outro variegado marrom e bege.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de chapéus bucket de crochê</h4>
+                                <p class="card-text">Dificuldade: fácil</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Amigurumis
+                            </header>
+                            <img class="d-block w-100" src="./imgs/amigurumis.jpg" alt="Amigurumi do homem aranha com pano de crochê colorido no fundo.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de amigurumi</h4>
+                                <p class="card-text">Dificuldade: fácil</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <header class="card-header">
+                                Paninhos
+                            </header>
+                            <img class="d-block w-100" src="./imgs/paninhos.jpg" alt="Paninhos de tricô com texturas e cores diferentes: chevron em azul bebê, outro tipo de chevron em azul petróleo e ponto waffle em verde oliva.">
+                            <div class="card-body">
+                                <h4 class="card-title">Tutoriais de panos de prato de tricô</h4>
+                                <p class="card-text">Dificuldade: fácil</p>
+                                <a href="#" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="sobre" class="padding-fix">
+                <h2>Sobre o artista</h2>
+                    <p>
+                        Eae galera, meu nome é Guilherme Larré, eu sou filho, neto e sobrinho de algumas das crocheteiras mais raízes de Olinda (Pernambuco), e tou aqui tentando reviver algumas das artes que sustentaram minha família por décadas.
+                    </p>
+                    <p>
+                        A ideia é compartilhar algumas de minhas criações, sem compromisso, pra que eu possivelmente inspire mais jovens a adaptarem artes têxteis seculares para o seu estilo no século XXI.
+                    </p>
+                    <p>
+                        Posso dizer que o croché (ou crochê) e tricô são ótimas distrações pros nossos dias estressantes. Com certeza já me salvou de diversos momentos cansativos e depressivos. Quem sabe eu não compartilho uns tutoriais por aqui também? Se me pedirem com carinho, eu faço!
+                    </p>
+            </section>
+    
+            <section id="contato" class="padding-fix">
+                <h2>Contato</h2>
+                <div class="contact-methods">
+                    <div>
+                        <h3>Fale comigo!</h3>
+                        <p class="mensagem-sucesso">Guilherme, sua mensagem foi enviada com sucesso!</p>
+                        <form id="form-mensagem">
+                            <input id="nome-usuario" type="text" placeholder="Seu nome completo" required/>
+                            <p class="mensagem-erro">O nome não está completo!</p>
+                            <input id="email-usuario" type="email" placeholder="Seu e-mail" required/>
+                            <input id="tel-usuario" type="tel" placeholder="Seu telefone (opcional)"/>
+                            <textarea id="msg-usuario" placeholder="Sua mensagem" required></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3>Me acompanhe nas redes</h3>
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.instagram.com/guilarre" title="Siga-me no Instagram">
+                                    <img src="./imgs/instagram.png" alt="Logo do Instagram"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Manda um zap">
+                                    <img src="./imgs/whatsapp.png" alt="Logo do Whatsapp"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Visite meu canal no Youtube">
+                                    <img src="./imgs/youtube.png" alt="Logo do Youtube"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Bora crochetar junto!</h3>
+                        <p>
+                            Rua JavaScript n° 124, Vila HTML - Olinda - PE
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </footer>
-    <script src="./main.js"></script>
+        
+        <!-- Rodapé -->
+            <section id="footer">
+                <div class="container">
+                    <footer>
+                        <p>
+                            &copy; Guilherme Larré - Todos os direitos reservados - 2025
+                        </p>
+                    </footer>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
+
+<script src="./libs/bootstrap.bundle.min.js"></script>
+<script src="./main.js"></script>
 </html>

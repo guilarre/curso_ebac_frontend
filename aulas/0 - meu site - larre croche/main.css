@@ -1,3 +1,173 @@
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2; /* mín. 2 pra ficar acima do resto do container */
+}
+
+header h1 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+header,
+section h2,
+section h3,
+form button,
+.card-body,
+.card-header {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header a:hover {
+    color: rgb(222, 186, 255);
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background-color: rgb(185, 112, 252);
+}
+
+body, input, textarea {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section, #contato h3, .card, .carousel {
+    margin-top: 30px;
+}
+
+section p, .card-body, .card-header {
+    color: rgb(93, 30, 152);
+}
+
+#footer p {
+    color: #fff;
+    padding-top: 15px;
+}
+
+section h2, section h3 {
+    color: blueviolet
+}
+
+.padding-fix {
+    padding-top: 120px;
+}
+
+header, #footer {
+    background-color: blueviolet;
+    color: #ffffff;
+    padding: 8px;
+}
+
+button.navbar-toggler.collapsed {
+    border-color: rgb(185, 112, 252);
+    border-width: 2px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+header.card-header {
+    background-color: rgb(243, 230, 255);
+}
+
+.card a {
+    background-color: blueviolet;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contato .container {
+    display: block;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea {
+    resize: none;
+    height: 180px;
+}
+
+form button {
+    background-color: blueviolet;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+form button:hover {
+    background-color: rgb(93, 30, 152);
+}
+
+input:focus, textarea:focus {
+    outline-color: rgb(93, 30, 152);
+}
+
+.social-links li {
+    display: inline;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links {
+    padding-inline-start: 0px;
+}
+
+.mensagem-sucesso {
+    background-color: rgb(93, 30, 152);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 16px;
+    width: 320px;
+    display: none;
+}
+
+.mensagem-erro {
+    background-color: rgb(198, 10, 113);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px;
+    width: 320px;
+    display: none;
+}
+
+input.error {
+    border: 1.6px;
+    border-style: solid;
+    border-color: rgb(198, 10, 113);
+    outline-color: rgb(198, 10, 113);
+    color: rgb(198, 10, 113);
+}
+
+/* 
+
 * {
     margin: 0;
     padding: 0;
@@ -161,4 +331,4 @@ input.error {
     border-color: rgb(198, 10, 113);
     outline-color: rgb(198, 10, 113);
     color: rgb(198, 10, 113);
-}
+} */

@@ -1,3 +1,10 @@
+// Ajeitando a rolagem para o topo no caso da seção de início e bug causado pelo scrollTo() que dá conflito com o data-bs-spy do Bootstrap
+document.querySelector('.scroll-top').addEventListener('click', () => {
+    document.querySelector('html').scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    document.querySelector('.scroll-top').classList.add('active');
+});
+
+// Funcionalidade do formulário de contato
 const form = document.getElementById('form-mensagem');
 const nomeUsuario = document.getElementById('nome-usuario');
 let formEValido = false;
